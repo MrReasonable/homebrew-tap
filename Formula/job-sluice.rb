@@ -3,8 +3,8 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/35/f2/6f57d371875fbade236e4af7ce81f60531e971d1ca0ab4313c73e28ff648/job_sluice-2.3.0.tar.gz"
-  sha256 "e98d5fa4b0520094456d5945a65abb68e213e463272a2bb4360ac699b5cbf3f8"
+  url "https://files.pythonhosted.org/packages/6c/f0/11fd7e632c38fd4c14bcd32d65aedeae90f9522dd25b08f98c1e12dcf841/job_sluice-2.4.0.tar.gz"
+  sha256 "245cbc9170ce4c1d4ea4e5a05059aaf8fb4b5bdcae39076064daa469a215079d"
   license "MIT"
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -67,8 +67,8 @@ class JobSluice < Formula
   end
 
   resource "cssselect2" do
-    url "https://files.pythonhosted.org/packages/e0/20/92eaa6b0aec7189fa4b75c890640e076e9e793095721db69c5c81142c2e1/cssselect2-0.9.0.tar.gz"
-    sha256 "759aa22c216326356f65e62e791d66160a0f9c91d1424e8d8adc5e74dddfc6fb"
+    url "https://files.pythonhosted.org/packages/d6/f5/333e585b6c7a479ed9fb5c92b991b9adf48ee2aa74b6fa194cbdfe4471f7/cssselect2-0.10.0.tar.gz"
+    sha256 "5bc3e3e8da5e77a4a7396a464b5582200d8813bca40fa940263ac5ae57aafccd"
   end
 
   resource "fonttools" do
