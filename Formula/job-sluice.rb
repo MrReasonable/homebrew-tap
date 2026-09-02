@@ -3,8 +3,8 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/6c/f0/11fd7e632c38fd4c14bcd32d65aedeae90f9522dd25b08f98c1e12dcf841/job_sluice-2.4.0.tar.gz"
-  sha256 "245cbc9170ce4c1d4ea4e5a05059aaf8fb4b5bdcae39076064daa469a215079d"
+  url "https://files.pythonhosted.org/packages/24/ac/f3d9bc57d20164ed4c74f5e48f01bb84f16fce72a7a6f360069056e2bd83/job_sluice-2.4.1.tar.gz"
+  sha256 "b7b454c8e3bc267c3155cd3f769567f14ffc2d7eb64f5da6f01e5780e5027920"
   license "MIT"
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -67,13 +67,13 @@ class JobSluice < Formula
   end
 
   resource "cssselect2" do
-    url "https://files.pythonhosted.org/packages/d6/f5/333e585b6c7a479ed9fb5c92b991b9adf48ee2aa74b6fa194cbdfe4471f7/cssselect2-0.10.0.tar.gz"
-    sha256 "5bc3e3e8da5e77a4a7396a464b5582200d8813bca40fa940263ac5ae57aafccd"
+    url "https://files.pythonhosted.org/packages/06/00/2456b6b664c7a770989cbe3c352aac4eb962c938486f03a2e1255ae963c6/cssselect2-0.10.1.tar.gz"
+    sha256 "83b0d820ef589dabaf693289b647c2f5b410f76d285f56deba911ffa75a7b9d1"
   end
 
   resource "fonttools" do
-    url "https://files.pythonhosted.org/packages/84/69/c97f2c18e0db87d2c7b15da1974dace76ae938f1cfa22e2727a648b7ed43/fonttools-4.63.0.tar.gz"
-    sha256 "caeb583deeb5168e694b65cda8b4ee62abedfa66cf88488734466f2366b9c4e0"
+    url "https://files.pythonhosted.org/packages/d4/41/0f072a712dc74496e03710e462a18a4cfd8a258ad055a4e22d28b43a7abd/fonttools-4.64.0.tar.gz"
+    sha256 "ecb2e59a7bc692fee64dda6010deb66222335693b30046f15cccf81233aa715f"
   end
 
   resource "google-api-core" do
@@ -82,8 +82,8 @@ class JobSluice < Formula
   end
 
   resource "google-api-python-client" do
-    url "https://files.pythonhosted.org/packages/13/ff/c58d475046b552754a5ee24d98912506b07ea7ac7f0a434b327ad194ca32/google_api_python_client-2.199.0.tar.gz"
-    sha256 "8150816e22e01b36aa4b7523cdc1a2d2164e81c4de8a9b338785d7ecb4390ec2"
+    url "https://files.pythonhosted.org/packages/fd/e5/12024a0ae2fd39a54ff47a3868c47344ffff4ff1cd5edf4dff523c1a9fc1/google_api_python_client-2.200.0.tar.gz"
+    sha256 "82aa18b851328ea04867fd51c5a0c8da2e1b86ec45ce08487e902e7726d4ee50"
   end
 
   resource "google-auth" do
@@ -167,8 +167,8 @@ class JobSluice < Formula
   end
 
   resource "protobuf" do
-    url "https://files.pythonhosted.org/packages/a7/e7/0553e21d25ca4d9f573135775348a372c3ec34a93a71d5f297c3bac38341/protobuf-7.36.0.tar.gz"
-    sha256 "e8e09cb0d794c6687926fa558a8a6e72aa10edb997d5ca61da0765f12a3e00ea"
+    url "https://files.pythonhosted.org/packages/86/73/f66c748df06e7fe24e658eddd600d19c4b40bad836c97ce2d0ad9851fb6b/protobuf-7.36.1.tar.gz"
+    sha256 "d0f6470f0ce2b84e3feaea2d4b816378b37ba4d4aa08a274305373de93e2d524"
   end
 
   resource "pyasn1" do
