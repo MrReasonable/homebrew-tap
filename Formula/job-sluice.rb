@@ -3,8 +3,8 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/bf/2b/dccc2d759339179da7730724384800c2cb4d5f8dbd248fdd975e1452673d/job_sluice-2.6.0.tar.gz"
-  sha256 "bd552c02cdd5eb8ecaa2bb6cb2ba7fd982972d4061ef2f8c66a84f4ed7986a85"
+  url "https://files.pythonhosted.org/packages/eb/ad/173e4d2abc90e687616a23c5ba9dac47bc6d48a23bf745adf5e722b55b41/job_sluice-2.9.3.tar.gz"
+  sha256 "54913d9afaa33991a9449704fce5a60a9abb2b1cb55caa1911ae17dcd3166e55"
   license "MIT"
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -32,8 +32,8 @@ class JobSluice < Formula
                 exclude_packages: %w[cffi cryptography pillow pydantic rpds-py]
 
   resource "anyio" do
-    url "https://files.pythonhosted.org/packages/61/cc/a381afa6efea9f496eff839d4a6a1aed3bfafc7b3ab4b0d1b243a12573dd/anyio-4.14.2.tar.gz"
-    sha256 "cfa139f3ed1a23ee8f88a145ddb5ac7605b8bbfd8592baacd7ce3d8bb4313c7f"
+    url "https://files.pythonhosted.org/packages/ea/9a/c15a60547004a3f3cea20296c934f827ddd7bdba225a2e7e9fcb5ec48c80/anyio-4.15.0.tar.gz"
+    sha256 "b5c620ed540725e2579c31b17bb995b3bf02c9281c9cace04c7d186380bab85e"
   end
 
   resource "argcomplete" do
@@ -77,8 +77,8 @@ class JobSluice < Formula
   end
 
   resource "google-api-core" do
-    url "https://files.pythonhosted.org/packages/7b/7c/9be3903e3d45415e8ca493c75f8990a0f6f579d168015d44c379350d0ab0/google_api_core-2.34.0.tar.gz"
-    sha256 "98a779fe72de956eb1c9c2f47ff4c4432a668ece1a002ec38bed07ec2698ae59"
+    url "https://files.pythonhosted.org/packages/bf/d8/88c2f0e6b0dd46a7796cca64fad99c7adba2417916f5393e82b9b7d2548e/google_api_core-2.36.0.tar.gz"
+    sha256 "32779307b52e64c9a9592a3621de6281676ecaeea299fe8524e4637ab7ac2531"
   end
 
   resource "google-api-python-client" do
@@ -87,8 +87,8 @@ class JobSluice < Formula
   end
 
   resource "google-auth" do
-    url "https://files.pythonhosted.org/packages/41/64/55f316b729f92a552d26e00aa3b1542b2e149d0a5efe2842afff0cac7af7/google_auth-2.57.0.tar.gz"
-    sha256 "9b4f96d6a1feb5f7201231f47cfb3de08d8f176f8a61f9e461555116e95a8789"
+    url "https://files.pythonhosted.org/packages/53/3a/d3982b28d267880b5641f9a32c55d8062a9d2bad2d28d0274285391c89c2/google_auth-2.57.1.tar.gz"
+    sha256 "eb47b230fc6707eed4aee1c9cef55ec05bc1785eecba74ff8b572d531e921b1e"
   end
 
   resource "google-auth-httplib2" do
@@ -97,8 +97,8 @@ class JobSluice < Formula
   end
 
   resource "googleapis-common-protos" do
-    url "https://files.pythonhosted.org/packages/c0/90/fb8f1c84537fbf210c1f53a53ae473a805f6599c5a40b93c1bbadd211f7a/googleapis_common_protos-1.75.2.tar.gz"
-    sha256 "8829a3d1e4508c5b7b9a6b9525f7fccff611f8531644579a76466c29295d4bb2"
+    url "https://files.pythonhosted.org/packages/8a/c5/4353a188e2c335aee33269e8b654af228278cca8e5f0b4b5f11e5d0e9adb/googleapis_common_protos-1.75.3.tar.gz"
+    sha256 "57c435ac2c68b108999b6db075d9053e4d7a936ba57b4a3d45667b1346f1738a"
   end
 
   resource "h11" do
@@ -222,8 +222,8 @@ class JobSluice < Formula
   end
 
   resource "sse-starlette" do
-    url "https://files.pythonhosted.org/packages/f8/00/b42a44342a054d58cb1115d7c8aa9cb4290dd9442f9c1b91a4b8173dba22/sse_starlette-3.4.8.tar.gz"
-    sha256 "ed89ffbb75cbf78a5fe2f2109cd584792ee7f9dfac96f791db546df8f15f3f9c"
+    url "https://files.pythonhosted.org/packages/1e/e1/8a41e88e825ea26c44333897c7ffe35fe60153a2cfc097a5bd1d209ad281/sse_starlette-3.4.10.tar.gz"
+    sha256 "c6c87280d8feb4e55a8d79633782766b9cac6a26da5c79a145d00aa404117a86"
   end
 
   resource "starlette" do
@@ -328,18 +328,58 @@ class JobSluice < Formula
 
     assert_match version.to_s, shell_output("#{bin}/job-sluice --version")
 
-    # `doctor --offline` exits 1 on ANY unconfigured machine BY DESIGN -- no vault directory
-    # and no `claude` CLI are both DEAD rows, and exit_code returns 1 on any DEAD. Measured.
-    # ci.yml records the same fact for the container smoke and asserts the status in NEITHER
-    # direction. Asserting success here would fail every release.
-    report = shell_output("#{bin}/job-sluice doctor --offline", 1)
+    # `doctor --offline` exits 0 on a clean, unconfigured machine, which is exactly what this
+    # one is. #243's contract, stated in sluice/core/doctor.py::DoctorReport.exit_code: a
+    # component the user has not SUPPLIED yet is SETUP and never reaches the exit code, so no
+    # vault directory, no `claude` CLI and no `render` extra are all still 0. Non-zero means
+    # something they DID configure is broken.
+    #
+    # THIS LITERAL WAS `1` FOR TWO RELEASES, and the cost was the whole channel. 2.7.0's
+    # `feat(doctor): a verdict by default, and exit 0 on a clean install` inverted the
+    # contract; this number did not move; `brew test` then failed the `homebrew` job on 2.7.0
+    # and 2.8.0 while every other channel shipped from those same runs, so the public tap went
+    # on serving the last version whose job passed. The justification lived only in a comment
+    # here that ended "Measured." -- true when written, and nothing could tell when it stopped
+    # being true, which is CLAUDE.md's "a comment that states a mechanism needs a row that
+    # falsifies it" applied to a release channel.
+    # tests/test_homebrew_formula.py::test_the_formula_expects_the_real_clean_install_exit_code
+    # is that row: it RUNS `doctor --offline` and compares, so the formula's expectation and
+    # the program's behaviour can no longer drift apart in silence.
+    #
+    # The code is NOT passed explicitly, and that is forced rather than chosen. `shell_output`
+    # defaults to 0 and `brew audit`'s RuboCop pass rejects restating it:
+    # `FormulaAudit/Test: Passing 0 to shell_output is redundant`. The audit gates the release
+    # job, so an explicit `, 0` fails the channel just as surely as the wrong number did --
+    # which is how it shipped: 2.9.1 carried `, 0` on the reasoning that a claim this channel
+    # had already been broken by should be written down, and that reasoning was never run
+    # against the audit. Asserting a mechanism instead of executing it, in the fix for exactly
+    # that. `brew style --formula <tap>/<name>` reproduces it locally in seconds.
+    #
+    # The assertion is unchanged in force: an omitted code still means `brew test` fails unless
+    # the command exits 0. Only the spelling moved.
+    #
+    # This is the only place a release RUNS the shipped binary on a fresh machine and holds it
+    # to a status. ci.yml's container smoke deliberately asserts the status in neither
+    # direction -- it checks the report is positively present instead -- so it could not have
+    # caught this, and `release-please.yml` runs no doctor at all.
+    #
+    # `--verbose` IS LOAD-BEARING, not extra detail. #243 made `doctor` print a VERDICT by
+    # default and demoted the row table to `--verbose`, and the default view lists only rows
+    # that still need action -- so a renderer that is `ok`, which is exactly what this formula
+    # exists to prove, appears NOWHERE in it. The row assertion below can only ever match the
+    # verbose view. Measured: the row shape occurs once under `--verbose` and zero times
+    # without it. This cost the channel a third failed release (2.9.2), after the same #243
+    # change had already cost it two through the exit code above -- one upstream change, two
+    # separate assertions in this block, and fixing the first without auditing the second is
+    # what let it repeat.
+    report = shell_output("#{bin}/job-sluice doctor --offline --verbose")
     assert_match "job-sluice doctor", report
 
     # THE PAYOFF, POSITIVE rather than a refutation of "dead": core/app.py's
     # `if cv_cfg is not None:` drops the renderer row ENTIRELY on any load_cv_config error,
     # with exit 1 and the banner intact -- so refuting "dead" passes when the row is merely
     # ABSENT. A negative guard that finds nothing is indistinguishable from success.
-    # Row format is `f"{component:12} {subject:32} {state:9} ..."` (cli.py:1537).
+    # Row format is `f"{component:12} {subject:32} {state:9} ..."` (cli.py::_print_doctor).
     assert_match(/renderer\s+cv\.renderer\s+ok/, report)
 
     # ...and independently of sluice's own output format, so a change to doctor's printing
