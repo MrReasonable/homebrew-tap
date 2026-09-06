@@ -3,8 +3,8 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/e4/ad/b8bb8dea19c289a44c7be5bf988ebc3baf0a41306f0759963070a4c16018/job_sluice-2.9.5.tar.gz"
-  sha256 "06e926d9b019fffc3b66278f778fe340967f4ca23ca2581371caeedeb1dc23e3"
+  url "https://files.pythonhosted.org/packages/f1/2a/6acfc0c19f8711a3fc7ded5bce8c41b6e7a9fb3bef3d4aba4b0a61d97b3e/job_sluice-2.9.6.tar.gz"
+  sha256 "add87fc0b37991d1ddfe9c2a4ecddb14fd92364bb9a7ec908a6b5cc0a918c8bb"
   license "MIT"
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -36,8 +36,8 @@ class JobSluice < Formula
                 exclude_packages: %w[cffi cryptography pillow pydantic rpds-py]
 
   resource "anyio" do
-    url "https://files.pythonhosted.org/packages/ea/9a/c15a60547004a3f3cea20296c934f827ddd7bdba225a2e7e9fcb5ec48c80/anyio-4.15.0.tar.gz"
-    sha256 "b5c620ed540725e2579c31b17bb995b3bf02c9281c9cace04c7d186380bab85e"
+    url "https://files.pythonhosted.org/packages/a9/d2/f4d173e22df740bc37b1db102b386ba719b66e95b0f0d751f556b387e6d2/anyio-4.15.1.tar.gz"
+    sha256 "9f28306018cbd6d329e64a36d58256edff76dd996fe423bc957326e578b82a94"
   end
 
   resource "argcomplete" do
@@ -226,8 +226,8 @@ class JobSluice < Formula
   end
 
   resource "sse-starlette" do
-    url "https://files.pythonhosted.org/packages/1e/e1/8a41e88e825ea26c44333897c7ffe35fe60153a2cfc097a5bd1d209ad281/sse_starlette-3.4.10.tar.gz"
-    sha256 "c6c87280d8feb4e55a8d79633782766b9cac6a26da5c79a145d00aa404117a86"
+    url "https://files.pythonhosted.org/packages/2b/54/6767bb789b2f2fed6e0f953df949cd39dc263a384c1b65a95232598621d6/sse_starlette-3.4.11.tar.gz"
+    sha256 "1bae716c02f3e6f294be41ff333220692dae7c3cbab077c900f159676719dade"
   end
 
   resource "starlette" do
