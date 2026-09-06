@@ -3,8 +3,8 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/eb/ad/173e4d2abc90e687616a23c5ba9dac47bc6d48a23bf745adf5e722b55b41/job_sluice-2.9.3.tar.gz"
-  sha256 "54913d9afaa33991a9449704fce5a60a9abb2b1cb55caa1911ae17dcd3166e55"
+  url "https://files.pythonhosted.org/packages/e4/ad/b8bb8dea19c289a44c7be5bf988ebc3baf0a41306f0759963070a4c16018/job_sluice-2.9.5.tar.gz"
+  sha256 "06e926d9b019fffc3b66278f778fe340967f4ca23ca2581371caeedeb1dc23e3"
   license "MIT"
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -29,6 +29,10 @@ class JobSluice < Formula
   uses_from_macos "libffi"
 
   pypi_packages package_name:     "job-sluice[render,google,mcp,completion]",
+                # Padded to align with `exclude_packages:` below -- RuboCop's
+                # Layout/HashAlignment wants a multi-line hash literal's values in one
+                # column, and `brew audit --strict` runs it. Measured, not guessed.
+                extra_packages:   %w[typing-extensions],
                 exclude_packages: %w[cffi cryptography pillow pydantic rpds-py]
 
   resource "anyio" do
@@ -244,6 +248,11 @@ class JobSluice < Formula
   resource "truststore" do
     url "https://files.pythonhosted.org/packages/53/a3/1585216310e344e8102c22482f6060c7a6ea0322b63e026372e6dcefcfd6/truststore-0.10.4.tar.gz"
     sha256 "9d91bd436463ad5e4ee4aba766628dd6cd7010cf3e2461756b3303710eebc301"
+  end
+
+  resource "typing-extensions" do
+    url "https://files.pythonhosted.org/packages/f6/cc/6253133b5bb138fc3306cebfbda2c520f545d36b5be2c7255cc528bb45d6/typing_extensions-4.16.0.tar.gz"
+    sha256 "dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5"
   end
 
   resource "tzdata" do
