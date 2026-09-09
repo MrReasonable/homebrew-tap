@@ -3,8 +3,8 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/82/92/cf1e3dbdbb1d6204349e131e9e2f3602eecec92d61fced595ef7de2ff1f2/job_sluice-2.10.0.tar.gz"
-  sha256 "89f415cbe80cefb109dca6931f50b3efac864027f0fd6832e40fc2a72266b69f"
+  url "https://files.pythonhosted.org/packages/48/43/b2753eff02f34b038db61a32f58a194f8d5d09dc10b6353ef7a557968a4a/job_sluice-2.11.0.tar.gz"
+  sha256 "f7a09e0127df5493287168e3d91b7d79a5348740eb978ca02960a99b62bb4662"
   license "MIT"
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -100,6 +100,11 @@ class JobSluice < Formula
     sha256 "916225a6367e613c9af44d83f41688a599d3f687777846b8b91bec65085ed1f1"
   end
 
+  resource "google-auth-oauthlib" do
+    url "https://files.pythonhosted.org/packages/dd/fb/e8def92f788410d96d1aff0cadfadb3f044bbffbe3d2560a1ad8fa0d9466/google_auth_oauthlib-1.4.1.tar.gz"
+    sha256 "1a83f5f2a8421dedadaa3caf25b3a710dddf85a33a63144be41c2fc79174b106"
+  end
+
   resource "googleapis-common-protos" do
     url "https://files.pythonhosted.org/packages/8a/c5/4353a188e2c335aee33269e8b654af228278cca8e5f0b4b5f11e5d0e9adb/googleapis_common_protos-1.75.3.tar.gz"
     sha256 "57c435ac2c68b108999b6db075d9053e4d7a936ba57b4a3d45667b1346f1738a"
@@ -151,13 +156,18 @@ class JobSluice < Formula
   end
 
   resource "mcp" do
-    url "https://files.pythonhosted.org/packages/d4/6e/21fb8e5d579dbe21d96ea4d5034200d46d8bdf2261053b5bd041f3c2f612/mcp-2.1.1.tar.gz"
-    sha256 "50b7ba1ebbe117008ea7bdd288234043e69c20b403d6851d19661e6d431a75ef"
+    url "https://files.pythonhosted.org/packages/76/31/ac54fb0fdd5b37de704486e288bba4fbbb463f24cfcfedbede407b854513/mcp-2.2.0.tar.gz"
+    sha256 "2dc37ecb1974becdcebdbf7561e7c15a07dbbf20ba21ba16c3593b3038b3afbd"
   end
 
   resource "mcp-types" do
-    url "https://files.pythonhosted.org/packages/6a/dd/1c4417dc0b722c23a1669032d5f044e41170fe5d4773b488a50fcce98c32/mcp_types-2.1.1.tar.gz"
-    sha256 "77dcbe48fba73cca71a673f2646a5f037a017b7a0a07ac89cec1113028890eda"
+    url "https://files.pythonhosted.org/packages/ae/91/762d7755d971aff8a28d75f7961656148edf27875c8026e6385aaab08ae7/mcp_types-2.2.0.tar.gz"
+    sha256 "d3ed53703ddd10d9c6399f29d322bb66f3f67ab41348ac8556ba23e07fedefad"
+  end
+
+  resource "oauthlib" do
+    url "https://files.pythonhosted.org/packages/0b/5f/19930f824ffeb0ad4372da4812c50edbd1434f678c90c2733e1188edfc63/oauthlib-3.3.1.tar.gz"
+    sha256 "0f0f8aa759826a193cf66c12ea1af1637f87b9b4622d46e866952bb022e538c9"
   end
 
   resource "opentelemetry-api" do
@@ -223,6 +233,11 @@ class JobSluice < Formula
   resource "requests" do
     url "https://files.pythonhosted.org/packages/ac/c3/e2a2b89f2d3e2179abd6d00ebd70bff6273f37fb3e0cc209f48b39d00cbf/requests-2.34.2.tar.gz"
     sha256 "f288924cae4e29463698d6d60bc6a4da69c89185ad1e0bcc4104f584e960b9ed"
+  end
+
+  resource "requests-oauthlib" do
+    url "https://files.pythonhosted.org/packages/42/f2/05f29bc3913aea15eb670be136045bf5c5bbf4b99ecb839da9b422bb2c85/requests-oauthlib-2.0.0.tar.gz"
+    sha256 "b3dffaebd884d8cd778494369603a9e7b58d29111bf6b41bdc2dcd87203af4e9"
   end
 
   resource "sse-starlette" do
@@ -402,8 +417,9 @@ class JobSluice < Formula
     # and `mcp` in particular carries a hard pydantic version floor -- so a skew between what
     # this formula ships and what a brewed interpreter's homebrew-core dependencies actually
     # provide would surface as a user-facing ImportError on `mcp`/`google`/`completion` with
-    # this job still green. Import each of the other three extras' top-level module the same
-    # way the render extra is proven above, against the SAME installed libexec interpreter.
-    system libexec/"bin/python", "-c", "import mcp, googleapiclient, argcomplete"
+    # this job still green. Import each of the other three extras' top-level module or
+    # modules the same way the render extra is proven above, against the SAME installed
+    # libexec interpreter.
+    system libexec/"bin/python", "-c", "import mcp, googleapiclient, google_auth_oauthlib, argcomplete"
   end
 end
