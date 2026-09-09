@@ -3,8 +3,8 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/e3/bf/53582ad035e6ef93c6d26cac41ee11bfe7ff7ca6e2e3826ba8b1545bcf42/job_sluice-2.12.0.tar.gz"
-  sha256 "3dd3e3033702bbd7440f9a0bb50b314332d5eb48f540ae9eae69f4782fc9891c"
+  url "https://files.pythonhosted.org/packages/1c/01/e865b4275ebc0afe2e716b4473b18254cde72c8198dffeb35d5797c97154/job_sluice-2.12.1.tar.gz"
+  sha256 "e2720b32a3ce5552df6f3ec00371a9f939dabeb35b15311e9d3359f37b556c7e"
   license "MIT"
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
