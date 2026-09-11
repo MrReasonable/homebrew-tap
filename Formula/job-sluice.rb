@@ -3,8 +3,8 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/c8/b7/2509659505cd05b6f2d86a4f5a5aa3c996712823f00e0aecf22a498e7f5e/job_sluice-2.12.2.tar.gz"
-  sha256 "58a4334d2a197989f3ef8401e6857a78caf234b4b9a863133c6b5aa6123a2620"
+  url "https://files.pythonhosted.org/packages/d9/40/b589e69bb9f78d9be5b5729178b8926e6feb9a00c859d396f7d3d14ffdb0/job_sluice-2.13.0.tar.gz"
+  sha256 "c791789ec8cc315c615244974aea4573e71a7b20727f249c43c13fc11403e43f"
   license "MIT"
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -76,8 +76,8 @@ class JobSluice < Formula
   end
 
   resource "fonttools" do
-    url "https://files.pythonhosted.org/packages/d4/41/0f072a712dc74496e03710e462a18a4cfd8a258ad055a4e22d28b43a7abd/fonttools-4.64.0.tar.gz"
-    sha256 "ecb2e59a7bc692fee64dda6010deb66222335693b30046f15cccf81233aa715f"
+    url "https://files.pythonhosted.org/packages/77/51/d63c7e52163ac14393a35bd14bd7c0da95f8f74be5d7cc988092f9965129/fonttools-4.65.0.tar.gz"
+    sha256 "762ba5431358d0dbd4a01982484a1d494fb267e91f974cdcf20b80eab8560f6f"
   end
 
   resource "google-api-core" do
@@ -91,8 +91,8 @@ class JobSluice < Formula
   end
 
   resource "google-auth" do
-    url "https://files.pythonhosted.org/packages/53/3a/d3982b28d267880b5641f9a32c55d8062a9d2bad2d28d0274285391c89c2/google_auth-2.57.1.tar.gz"
-    sha256 "eb47b230fc6707eed4aee1c9cef55ec05bc1785eecba74ff8b572d531e921b1e"
+    url "https://files.pythonhosted.org/packages/ac/ca/f398a483ce5aad18ca2f735646e45ccee2439bd94a41a4ad0cfa646bd495/google_auth-2.58.0.tar.gz"
+    sha256 "55e30cf15e737de92c5323d78cda8a83fcd57e7ffbaf900c4600039fd60a80fd"
   end
 
   resource "google-auth-httplib2" do
