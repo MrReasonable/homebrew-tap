@@ -3,8 +3,8 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/a2/5a/4ccfd2c0ab7d496c89a3663a7a8468e092d04bd66cfe936ba37a5b7b16e8/job_sluice-2.14.0.tar.gz"
-  sha256 "d0544d0e96ac1e955f1d075b125bc9975ab399fd76485c53c2754c6a7b9229e1"
+  url "https://files.pythonhosted.org/packages/2c/82/188bada0fa6d59fabf9004ef01e145a7eb4cad53200b25d6874a4a9314e8/job_sluice-2.14.1.tar.gz"
+  sha256 "160d2d83a75ba5514e4c7196fef1ee26f0a919706f53a9d476e573a5d5b3a023"
   license "MIT"
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -201,8 +201,8 @@ class JobSluice < Formula
   end
 
   resource "pyjwt" do
-    url "https://files.pythonhosted.org/packages/3b/81/58d0ac84e1ef3a3843791d6954d94c0b33d526c75eeb1efbce9d0a4c4077/pyjwt-2.13.0.tar.gz"
-    sha256 "41571c89ca91598c79e8ef18a2d07367d4810fbbd6f637794879baf1b7703423"
+    url "https://files.pythonhosted.org/packages/af/c3/8a3b59c25070cc61dc517fbdfa5dc0904670c96f605cc69759dc09166b99/pyjwt-2.14.0.tar.gz"
+    sha256 "77283c83fb56ecf566a886c757a714bc83668e38156de2cce8263302f42e0b86"
   end
 
   resource "pyparsing" do
