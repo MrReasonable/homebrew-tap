@@ -3,8 +3,8 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/62/40/faeacf6ab6d21269647990eb293bc88e6bae8819eb61a0c137ae22cedcaa/job_sluice-2.15.0.tar.gz"
-  sha256 "089f00c47d245d34402182dd1165af9059f8786eecb53f5e7fe151229729eb57"
+  url "https://files.pythonhosted.org/packages/66/a0/68f422463b469b7ebc478e3302e08b223888091d2c8ffea44e51dfcb1bd1/job_sluice-2.15.1.tar.gz"
+  sha256 "74eaa10f5a5b25d64898dc882ace6e288ba41ec3ea1fbbdb743b6d3a38932cb4"
   license "MIT"
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -271,8 +271,8 @@ class JobSluice < Formula
   end
 
   resource "tzdata" do
-    url "https://files.pythonhosted.org/packages/92/ff/5a28bdfd8c3ebec42564ac7d0e54ca3db65044a9314a97f9564fa7a1e926/tzdata-2026.3.tar.gz"
-    sha256 "4a1518b8993086a7982523e071643f3c0e5f213e75b21318e78bcabfff9d1415"
+    url "https://files.pythonhosted.org/packages/e4/31/3d74fa778a63b98b7374323befcc0be5ab3bd94afd4096a0124e7379152c/tzdata-2026.4.tar.gz"
+    sha256 "f1b8bd365d8d210c55353f4d7f8d6d8561c0ba50d704b700d195a9424bba0d79"
   end
 
   resource "uritemplate" do
