@@ -7,6 +7,12 @@ class JobSluice < Formula
   sha256 "76e17a4bd3ccd400fe1b5caa84d01e956c2020e81855820af5c4c88c089d4dd3"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-2.16.1-34932565067-1"
+    sha256 cellar: :any, arm64_tahoe:   "63f9269567f54010ac928091a4444b3d9f120fd74a46ed00dcfa02642500a34a"
+    sha256 cellar: :any, arm64_sequoia: "5ab195f1f70754516bbcaff86ecf144366ee383aa734a9e3238c20ad61e1fd91"
+  end
+
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
   # `url, mirror, version, sha256, license` (`FormulaAudit/ComponentsOrder`, a plain cop that
   # fires even without --strict), which the emitted `url`/`sha256`/`license` above already
