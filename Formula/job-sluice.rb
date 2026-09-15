@@ -3,9 +3,15 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/bf/e0/948b20bd6dbd201a18965dcade3e63d6ca4775358993c27792c2904c2add/job_sluice-2.16.1.tar.gz"
-  sha256 "76e17a4bd3ccd400fe1b5caa84d01e956c2020e81855820af5c4c88c089d4dd3"
+  url "https://files.pythonhosted.org/packages/97/dd/f09bb984b179ed17c90f5867f0706be34cac60582a7e2c8c2ed9a4fd73db/job_sluice-2.17.0.tar.gz"
+  sha256 "790298134303efcf6e3c73fd2f7d876098add1b5c87421dcfd7d7e46583a8372"
   license "MIT"
+
+  bottle do
+    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-2.17.0-34962317690-1"
+    sha256 cellar: :any, arm64_tahoe:   "ef9780f4e78705c8e134168cff6d2fadc415036fee5897bab445918086a2b9fd"
+    sha256 cellar: :any, arm64_sequoia: "76136834c09480141c06df58cb65e6e98ccf406b414cf6a392d84b74da23cb08"
+  end
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
   # `url, mirror, version, sha256, license` (`FormulaAudit/ComponentsOrder`, a plain cop that
@@ -286,8 +292,8 @@ class JobSluice < Formula
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/f2/0f/3f86e61397dd33bf2ccf28188c40db6a740658aeebbbf6e7dbc101a1f487/uvicorn-0.52.4.tar.gz"
-    sha256 "73acfee47a0b133c5de13d219492d62d8a31e935f4fe6e41a232451a15379f86"
+    url "https://files.pythonhosted.org/packages/5d/ad/04bbb797c84fc1f26cb171f7394716f4865ffb8d8c5e1eef42565c2dfa6b/uvicorn-0.53.0.tar.gz"
+    sha256 "a9356f0cb89b3b8621529c5d5eebd69bfe154f4c3f68b4cf2de47e45fa855c2e"
   end
 
   resource "weasyprint" do
