@@ -3,14 +3,14 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/52/9b/1ba027da2c4db59c1335a45b50edaf94cfa85e1d6e3e0e973d88bd99856e/job_sluice-2.17.2.tar.gz"
-  sha256 "4392b62b91525831f93a2862b03594eb48b92986c9643429f1e0db458944cfac"
+  url "https://files.pythonhosted.org/packages/ce/57/7a6824326b40f181bf3f3ad8cb564478be116482ace80ef86dde9cb99faa/job_sluice-2.18.0.tar.gz"
+  sha256 "20d8b83920c32f3836a5b23d2df5ea0f4ff1937807afef0f1c418c7f44744557"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-2.17.2-36708753191-1"
-    sha256 cellar: :any, arm64_tahoe:   "a869af2b09c0537d9c6db258f04df454dba047b21e1ce067b7243a6e048972e4"
-    sha256 cellar: :any, arm64_sequoia: "7cfad72b61ce14577b76011a1b77a37f871bfa0ca140c86444afd7879e0da6bf"
+    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-2.18.0-36778391017-1"
+    sha256 cellar: :any, arm64_tahoe:   "62b943594bfc443533fdc05ded6af2ef79a532dd446a829b2ddaa5739d13f749"
+    sha256 cellar: :any, arm64_sequoia: "021db0c381fd6b796800d81ff7fcf96c67e9b340a952f596d7bc39466cac2e4d"
   end
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -82,13 +82,13 @@ class JobSluice < Formula
   end
 
   resource "fonttools" do
-    url "https://files.pythonhosted.org/packages/a2/24/86f9930b930b97fc82266083320f3c34643ef67261c32651e893db525aca/fonttools-4.66.0.tar.gz"
-    sha256 "ef0610dfe7bb5bf574d9bdad6f597403ebc9807d124ac6f148d7604b2609be98"
+    url "https://files.pythonhosted.org/packages/87/b6/126c659ab7e0e03e01a5f5d223abf7b2c0691ae92718085a212a3924a2a3/fonttools-4.66.1.tar.gz"
+    sha256 "64967c6ddb0d4c610dfd8cb1485981b2d27972ddfb7d4bbbd9e199d2a089c450"
   end
 
   resource "google-api-core" do
-    url "https://files.pythonhosted.org/packages/44/8d/cbdc715cdfb7acd7ccf1ce2869b103734c6a3cf124afd021f56c10c17522/google_api_core-2.39.0.tar.gz"
-    sha256 "824ee414a10adefefae33fc5e2ba28dc6f0f7089d011c9cc98ea9178e61299e9"
+    url "https://files.pythonhosted.org/packages/23/f7/0fb8c3618c783ad49da1aaf97f93a4bb9e4ed522135516b44d129a7f85bb/google_api_core-2.40.0.tar.gz"
+    sha256 "ebee7d1b138b5362beecec260e6e8988ac97346562c7382ccb6f0ad8435c599f"
   end
 
   resource "google-api-python-client" do
@@ -102,18 +102,18 @@ class JobSluice < Formula
   end
 
   resource "google-auth-httplib2" do
-    url "https://files.pythonhosted.org/packages/d4/74/0c8177b73734dfbd89420c162ac8754257fa0f9007fb49569493d83a17db/google_auth_httplib2-0.4.2.tar.gz"
-    sha256 "916225a6367e613c9af44d83f41688a599d3f687777846b8b91bec65085ed1f1"
+    url "https://files.pythonhosted.org/packages/30/e8/e050a21cea15ff6480095fec643dcb346466361eb4c0cbe2120b3cb6be67/google_auth_httplib2-0.4.3.tar.gz"
+    sha256 "0ba8d2eeab86e820f23466f57c45d509052db0a5f1bef6ed1cf92e4bb75b847d"
   end
 
   resource "google-auth-oauthlib" do
-    url "https://files.pythonhosted.org/packages/dd/fb/e8def92f788410d96d1aff0cadfadb3f044bbffbe3d2560a1ad8fa0d9466/google_auth_oauthlib-1.4.1.tar.gz"
-    sha256 "1a83f5f2a8421dedadaa3caf25b3a710dddf85a33a63144be41c2fc79174b106"
+    url "https://files.pythonhosted.org/packages/c4/40/1d7901e454831247e377ef3f642cb857cc0e82ec4d2380b7a148a48f20d1/google_auth_oauthlib-1.5.0.tar.gz"
+    sha256 "b351107c7dd9017f426cbb0272ea1bc04f469020fd18f4443c7d40362e0b1510"
   end
 
   resource "googleapis-common-protos" do
-    url "https://files.pythonhosted.org/packages/4b/13/f83676de1dce4f8106bcba91725b3f3f4baf6ca1977685102b008b8e0097/googleapis_common_protos-1.75.4.tar.gz"
-    sha256 "4587babdc82a8d7e5a3d4f5a6697e064bf44a598b4d08341c212b68185eadbcd"
+    url "https://files.pythonhosted.org/packages/8d/2b/6ce81972d5c8cab9705fddce3153be63222d9e12fd96f8baba5038a744dd/googleapis_common_protos-1.75.5.tar.gz"
+    sha256 "c7a866fc34ed29a3b10af627a4b9b1dc2433313ca6e959f0ae4feb132047ed72"
   end
 
   resource "h11" do
@@ -182,8 +182,8 @@ class JobSluice < Formula
   end
 
   resource "proto-plus" do
-    url "https://files.pythonhosted.org/packages/40/a6/4fbadcc2044034449b3f8f0ce82dcf3005d53f37c136642103fd4836a31c/proto_plus-1.28.4.tar.gz"
-    sha256 "5ff7ecad828e032a491fcb86947801768e32237f99dd049b649965b892ae9a63"
+    url "https://files.pythonhosted.org/packages/46/70/783e33ffbb4466cc154a94f79b869b92a451e2bd45605054e68ff68b7af6/proto_plus-1.29.0.tar.gz"
+    sha256 "cfb4e62ad7e13dd18f346cabbda00cab39930d36a05791fd81ddb074d6ee884f"
   end
 
   resource "protobuf" do
