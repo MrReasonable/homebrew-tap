@@ -3,14 +3,14 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/ef/00/a90bb4fed34b708b6ce3b4fac856bed314d54043f14a3c8687791e54e8af/job_sluice-3.0.0.tar.gz"
-  sha256 "aec9e54d2dc57032400bab80f5eb932b06707b3851391e831475c1356d939864"
+  url "https://files.pythonhosted.org/packages/e6/4c/e38dbabacf0a237055415cd9b5896ca494faaa0ff0ab214d4021db9995be/job_sluice-3.1.0.tar.gz"
+  sha256 "75ece3f675dd538e79f8e7874db0f7181826c2fd2e0303b4faeaefcf10791d77"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-3.0.0-36921727931-1"
-    sha256 cellar: :any, arm64_tahoe:   "581ca83b39b055c5c94b97dd90271d364ca9147cd412659b8842b9f98ab0108b"
-    sha256 cellar: :any, arm64_sequoia: "4b428d6c0b32cd401c4bdf9ff3ac5e9381956927775af3b2cafe13d3eab44362"
+    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-3.1.0-37014398156-1"
+    sha256 cellar: :any, arm64_tahoe:   "62ace9a68d57d37af3124cdcc67987ff950039b799548bb7edfb731c44f1ab1f"
+    sha256 cellar: :any, arm64_sequoia: "6e8ebced86cc952dfd641785a5ef638dc66adce3d64eb0d189f364a521aca2b6"
   end
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -92,8 +92,8 @@ class JobSluice < Formula
   end
 
   resource "google-api-python-client" do
-    url "https://files.pythonhosted.org/packages/fd/e5/12024a0ae2fd39a54ff47a3868c47344ffff4ff1cd5edf4dff523c1a9fc1/google_api_python_client-2.200.0.tar.gz"
-    sha256 "82aa18b851328ea04867fd51c5a0c8da2e1b86ec45ce08487e902e7726d4ee50"
+    url "https://files.pythonhosted.org/packages/b6/47/077e889d3c618d971d3bce4ab198c645a607276b8d4bb151cfe78d2c92bb/google_api_python_client-2.201.0.tar.gz"
+    sha256 "d5691982abd7287f53cb0b0e0c6a9984d4103cf864ea0a88cb6e4347bbaf70de"
   end
 
   resource "google-auth" do
