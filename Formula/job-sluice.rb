@@ -3,14 +3,14 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/e6/4c/e38dbabacf0a237055415cd9b5896ca494faaa0ff0ab214d4021db9995be/job_sluice-3.1.0.tar.gz"
-  sha256 "75ece3f675dd538e79f8e7874db0f7181826c2fd2e0303b4faeaefcf10791d77"
+  url "https://files.pythonhosted.org/packages/55/79/19522887796a874b56d42c999c5fdaf365679063ad1c4ca889e76a1cae35/job_sluice-3.2.0.tar.gz"
+  sha256 "c01b736a74c5ff5fff1abb36846efc2794fac6add92029cf95789d3c1dab2583"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-3.1.0-37014398156-1"
-    sha256 cellar: :any, arm64_tahoe:   "62ace9a68d57d37af3124cdcc67987ff950039b799548bb7edfb731c44f1ab1f"
-    sha256 cellar: :any, arm64_sequoia: "6e8ebced86cc952dfd641785a5ef638dc66adce3d64eb0d189f364a521aca2b6"
+    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-3.2.0-37167102109-1"
+    sha256 cellar: :any, arm64_tahoe:   "d0de63bf64d3452ca6022ccd8852667761495345c9a9c1783210077254ea11f2"
+    sha256 cellar: :any, arm64_sequoia: "b916a29e9506baa2cfa15a074e8b244c98a518521a476ef8104ce57680725982"
   end
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -102,8 +102,8 @@ class JobSluice < Formula
   end
 
   resource "google-auth-httplib2" do
-    url "https://files.pythonhosted.org/packages/30/e8/e050a21cea15ff6480095fec643dcb346466361eb4c0cbe2120b3cb6be67/google_auth_httplib2-0.4.3.tar.gz"
-    sha256 "0ba8d2eeab86e820f23466f57c45d509052db0a5f1bef6ed1cf92e4bb75b847d"
+    url "https://files.pythonhosted.org/packages/bb/6d/a511ca64d5412850e351bdec6bb224e5090749bd85c186135e8fdb4fd85a/google_auth_httplib2-0.4.4.tar.gz"
+    sha256 "b931de392c20cfaa351cd789274922bd8cdc001e0e9e96de31b39d71347f8e16"
   end
 
   resource "google-auth-oauthlib" do
@@ -157,18 +157,18 @@ class JobSluice < Formula
   end
 
   resource "markupsafe" do
-    url "https://files.pythonhosted.org/packages/7e/99/7690b6d4034fffd95959cbe0c02de8deb3098cc577c67bb6a24fe5d7caa7/markupsafe-3.0.3.tar.gz"
-    sha256 "722695808f4b6457b320fdc131280796bdceb04ab50fe1795cd540799ebe1698"
+    url "https://files.pythonhosted.org/packages/38/9b/e422a865e1d5d57d0e509b4e0bf1c1a70a7f6382c29a5aa428df994c8bc8/markupsafe-3.0.4.tar.gz"
+    sha256 "2e9ad7dd851bf45fab9f75cbff4cb493fee9979e8d8c7c9c3ee119022518edd6"
   end
 
   resource "mcp" do
-    url "https://files.pythonhosted.org/packages/76/31/ac54fb0fdd5b37de704486e288bba4fbbb463f24cfcfedbede407b854513/mcp-2.2.0.tar.gz"
-    sha256 "2dc37ecb1974becdcebdbf7561e7c15a07dbbf20ba21ba16c3593b3038b3afbd"
+    url "https://files.pythonhosted.org/packages/9d/8d/e0d339616f4810e9051d4aba6887afab289ab1f81875fe908b606cdfd0e3/mcp-2.3.0.tar.gz"
+    sha256 "8b147a50441cf059dc88c684e0aeed3687f0aa0f39c6cde7b90330effd2b34d8"
   end
 
   resource "mcp-types" do
-    url "https://files.pythonhosted.org/packages/ae/91/762d7755d971aff8a28d75f7961656148edf27875c8026e6385aaab08ae7/mcp_types-2.2.0.tar.gz"
-    sha256 "d3ed53703ddd10d9c6399f29d322bb66f3f67ab41348ac8556ba23e07fedefad"
+    url "https://files.pythonhosted.org/packages/9e/2d/7c251e34207f6c51000312fc8839111ac45cfe02023f90b44e7f1051dd8e/mcp_types-2.3.0.tar.gz"
+    sha256 "d1e46549edb35ee19a94940fcee6d1addd7e589ab7ea92dda83f5d84781fc362"
   end
 
   resource "oauthlib" do
