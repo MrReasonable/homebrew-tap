@@ -3,14 +3,14 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/55/79/19522887796a874b56d42c999c5fdaf365679063ad1c4ca889e76a1cae35/job_sluice-3.2.0.tar.gz"
-  sha256 "c01b736a74c5ff5fff1abb36846efc2794fac6add92029cf95789d3c1dab2583"
+  url "https://files.pythonhosted.org/packages/fd/e8/4325276d64fc8bd7479dbd4a6bb56122a24d8c900983feeedcaf3f2eab89/job_sluice-4.0.0.tar.gz"
+  sha256 "b4e530673859a08e92c76ea9329e8efced8ecb04d1fa44b4d9b94433dc9f5daf"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-3.2.0-37167102109-1"
-    sha256 cellar: :any, arm64_tahoe:   "d0de63bf64d3452ca6022ccd8852667761495345c9a9c1783210077254ea11f2"
-    sha256 cellar: :any, arm64_sequoia: "b916a29e9506baa2cfa15a074e8b244c98a518521a476ef8104ce57680725982"
+    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-4.0.0-37533756849-1"
+    sha256 cellar: :any, arm64_tahoe:   "2a5edcc3c8d51acf8e3e68307f33a190dc4931dfe0ce038b7acd128207a69f25"
+    sha256 cellar: :any, arm64_sequoia: "76d4e9827ee67fbeebab014c861b98506501b9c6766960c51cb9ae2307986446"
   end
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -87,8 +87,8 @@ class JobSluice < Formula
   end
 
   resource "google-api-core" do
-    url "https://files.pythonhosted.org/packages/23/f7/0fb8c3618c783ad49da1aaf97f93a4bb9e4ed522135516b44d129a7f85bb/google_api_core-2.40.0.tar.gz"
-    sha256 "ebee7d1b138b5362beecec260e6e8988ac97346562c7382ccb6f0ad8435c599f"
+    url "https://files.pythonhosted.org/packages/0a/c7/5c90a4b12d68efe3a6c277c9d0336e3d1e7f64b41dfb780e35d0eefec77a/google_api_core-2.41.0.tar.gz"
+    sha256 "73e89a86baef6680934adeee6fbd0ceaf20c1393ab229b2f9b34efb23b0fdef3"
   end
 
   resource "google-api-python-client" do
@@ -97,8 +97,8 @@ class JobSluice < Formula
   end
 
   resource "google-auth" do
-    url "https://files.pythonhosted.org/packages/81/e3/9f752a968e487fbc10b2c2a1dd561b62489f923972911009577bb88fe7bb/google_auth-2.59.1.tar.gz"
-    sha256 "ce50fc533ac02f489a2b183a0c156672c376ecb2091b1127bc7efba2975fff27"
+    url "https://files.pythonhosted.org/packages/6e/a0/d9a866dbcf9de983d717a969744e50492d1c9c56b10207a9f23b3fab85d7/google_auth-2.60.0.tar.gz"
+    sha256 "34aa0283ef72c99cd410e35db4417211fa3e6aaa5399183227bbe3b82bd15192"
   end
 
   resource "google-auth-httplib2" do
@@ -277,8 +277,8 @@ class JobSluice < Formula
   end
 
   resource "tzdata" do
-    url "https://files.pythonhosted.org/packages/e4/31/3d74fa778a63b98b7374323befcc0be5ab3bd94afd4096a0124e7379152c/tzdata-2026.4.tar.gz"
-    sha256 "f1b8bd365d8d210c55353f4d7f8d6d8561c0ba50d704b700d195a9424bba0d79"
+    url "https://files.pythonhosted.org/packages/d9/68/f1b440335057bfce71b6e50a9d09445aa2ecbd08359a337976627b8409e7/tzdata-2026.5.tar.gz"
+    sha256 "8cc73c0a0bfca7dbfa59235d60b2eff82231dee33f53d206db1acd9173cfc0a7"
   end
 
   resource "uritemplate" do
