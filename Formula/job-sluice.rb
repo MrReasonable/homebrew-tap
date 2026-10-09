@@ -3,14 +3,14 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/10/0c/accd4109295dacf90134cafc364e50c7ed40fdde2238730e5f1745630a43/job_sluice-4.1.0.tar.gz"
-  sha256 "7c217c3de36a49b52d3703520bc9f499c322a4ac9520593d83d2345213d1fe50"
+  url "https://files.pythonhosted.org/packages/8c/91/471a36d6f89094b87e47cfe159599215f3a9ef8dbf50f963c8daf91cf54e/job_sluice-4.2.0.tar.gz"
+  sha256 "988141f1f76c10a3aa13f265a1f908d7b27edb209245ca519025b0c262c83de4"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-4.1.0-37614962466-1"
-    sha256 cellar: :any, arm64_tahoe:   "14fd2d6303b86a32a849dbcac84e71bec0bedc34dce3ce6975d87cbccc7604b6"
-    sha256 cellar: :any, arm64_sequoia: "96a0da972e2ae14a6ffe95ab353a454baca7c8b9f9912d31f55d301a4847c297"
+    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-4.2.0-37894028732-1"
+    sha256 cellar: :any, arm64_tahoe:   "9eb3effa405538f83211f36ec859d0c269c64813bbd991ddd34c0a361949ee7f"
+    sha256 cellar: :any, arm64_sequoia: "42786347b31f05f9c6cd3ad0680a8c5f9036288c8a37a93a91d06678531e8ba2"
   end
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -97,8 +97,8 @@ class JobSluice < Formula
   end
 
   resource "google-auth" do
-    url "https://files.pythonhosted.org/packages/6e/a0/d9a866dbcf9de983d717a969744e50492d1c9c56b10207a9f23b3fab85d7/google_auth-2.60.0.tar.gz"
-    sha256 "34aa0283ef72c99cd410e35db4417211fa3e6aaa5399183227bbe3b82bd15192"
+    url "https://files.pythonhosted.org/packages/c7/0b/9788e913f2202da49068c27ce821eebcf96319240a89d7bb11f206d6471f/google_auth-2.61.0.tar.gz"
+    sha256 "37f0815967322e8c32b12bf422531e8b637cafdaae0acbb9141117cfe6a96f23"
   end
 
   resource "google-auth-httplib2" do
@@ -177,8 +177,8 @@ class JobSluice < Formula
   end
 
   resource "opentelemetry-api" do
-    url "https://files.pythonhosted.org/packages/1f/dc/e12c1fe1ed8a7b7149777127b1a0e12ce5bd5a81d97408bedc2128c260f5/opentelemetry_api-1.45.0.tar.gz"
-    sha256 "711ede81773c8025c2c03dac0450bc89f3d30aea6eabcc815c570d4e35a963f7"
+    url "https://files.pythonhosted.org/packages/2e/02/6e0ae9cc61bd3169d401077b507b3ebc344745171e1051ab430be012dcd9/opentelemetry_api-1.45.1.tar.gz"
+    sha256 "aa38ed19bcc084ba42782a73255b3582283eced7ad6dddbd6695189e69adfb75"
   end
 
   resource "proto-plus" do
