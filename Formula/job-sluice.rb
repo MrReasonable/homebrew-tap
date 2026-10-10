@@ -3,14 +3,14 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/4f/dc/5bb3a066baba95874410285d3e3ce52b68dae62a989a2a6fb218799bbb2a/job_sluice-4.3.0.tar.gz"
-  sha256 "01488edd4016e61e40403751101d53bd10e6315c6a56d3620f876aa31b821ef0"
+  url "https://files.pythonhosted.org/packages/d2/5e/0a7b32d9dae6db6c6b6608e09cdc21633c59514f86a070f80effc87c8997/job_sluice-4.4.0.tar.gz"
+  sha256 "bbf4d3bc5a3948444184687e296da6ab4f42bf78a883dccf6cbd8a5eefbed2be"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-4.3.0-38009576998-1"
-    sha256 cellar: :any, arm64_tahoe:   "c8f83ba7d0e180a35c8e91d019389622320c7d246e8808d082e6d299f710765a"
-    sha256 cellar: :any, arm64_sequoia: "093abb243ff4bc74302e18e787a4e88d263fd2d41a6150f0d9147e8a06b01bbe"
+    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-4.4.0-38089971382-1"
+    sha256 cellar: :any, arm64_tahoe:   "f9ed0ba16b1fda4f667ffcd59e3729a61d84c0a79ff658e41a1b0681c86a1dbd"
+    sha256 cellar: :any, arm64_sequoia: "3daa634238de13e2d764af68c71e6191f1c6fc44b24dea6c60b730633f52708a"
   end
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
