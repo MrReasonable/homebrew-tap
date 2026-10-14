@@ -3,14 +3,14 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/27/e2/8a463e9f6f55ad876c86656030f0725b62b291e18725880d939549a2d78d/job_sluice-4.6.1.tar.gz"
-  sha256 "2246ddeeb809bef4716596adcd319bdcb02269999781461ff4ba52c2bf728708"
+  url "https://files.pythonhosted.org/packages/c7/0d/2848b89c8a20f77f19011bc3905f5b9341645564d8e0ed44d09afd42c66d/job_sluice-4.7.0.tar.gz"
+  sha256 "b563ec81ebdde80d226760c36ffabead13ebf797ba1d59065fed0c3f59c190fe"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-4.6.1-38414352637-1"
-    sha256 cellar: :any, arm64_tahoe:   "f527c825b2645096889779ad1a25b973dae6205d1c0e36741a9ecc86f12e94f0"
-    sha256 cellar: :any, arm64_sequoia: "c0661e6a520eb5066261f73d7acb09fe6c64594dea27118cf1615156479c2d5b"
+    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-4.7.0-38550122018-1"
+    sha256 cellar: :any, arm64_tahoe:   "2a026d7af966159aaabc97383178fdfd3cdf63314d0c988385feb3e176400061"
+    sha256 cellar: :any, arm64_sequoia: "6ccebadd4fca5017bd8c073245588ffa0dd88fa602593cc366978b44963dfe5a"
   end
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -97,8 +97,8 @@ class JobSluice < Formula
   end
 
   resource "google-auth" do
-    url "https://files.pythonhosted.org/packages/c7/0b/9788e913f2202da49068c27ce821eebcf96319240a89d7bb11f206d6471f/google_auth-2.61.0.tar.gz"
-    sha256 "37f0815967322e8c32b12bf422531e8b637cafdaae0acbb9141117cfe6a96f23"
+    url "https://files.pythonhosted.org/packages/f5/b9/4b2528f30114b106e3c3a7298ba38d85e682fd1f83fe7c4a5b77c7677082/google_auth-2.62.0.tar.gz"
+    sha256 "0bef0ce54bdf9ce226c5d66e4264413bd918141c31bbe49fb52eac882f513d69"
   end
 
   resource "google-auth-httplib2" do
@@ -252,8 +252,8 @@ class JobSluice < Formula
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/7b/2b/3850dc6bf7ef71b088962eba31dafc6cffd2f96e577ebb0bb316df96da3e/starlette-1.7.0.tar.gz"
-    sha256 "c79f74ea63cff761804fbbfb182f1e0b440c2d07b164d24700c5a1bab5d6ff5d"
+    url "https://files.pythonhosted.org/packages/e9/0c/6efb252d091ecccd7d62048ae11f0ea35cd75a4fbaeea5e30f9c3bf91d10/starlette-1.8.0.tar.gz"
+    sha256 "1565dc0b35d5737a271ed1e0e04e949f4e81198799f216d2667b0a0fb9cf9522"
   end
 
   resource "tinycss2" do
@@ -267,8 +267,8 @@ class JobSluice < Formula
   end
 
   resource "truststore" do
-    url "https://files.pythonhosted.org/packages/53/a3/1585216310e344e8102c22482f6060c7a6ea0322b63e026372e6dcefcfd6/truststore-0.10.4.tar.gz"
-    sha256 "9d91bd436463ad5e4ee4aba766628dd6cd7010cf3e2461756b3303710eebc301"
+    url "https://files.pythonhosted.org/packages/ee/9f/c5201d42a484c061e528825fc8e2d565f5abd50a4ced6fb7d29c4ec99b2b/truststore-0.10.5.tar.gz"
+    sha256 "30d36967ccaded5cbb38d602c433f53600036c79d502f4533a49b60a03bbefcd"
   end
 
   resource "typing-extensions" do
