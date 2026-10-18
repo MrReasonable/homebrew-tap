@@ -3,14 +3,14 @@ class JobSluice < Formula
 
   desc "Engineered, config-driven job-hunting pipeline"
   homepage "https://github.com/MrReasonable/sluice"
-  url "https://files.pythonhosted.org/packages/09/ed/53f63d5a5d7e02586f6428c32ca8481aeb8dbb03ecf6525815cf39a18636/job_sluice-4.9.0.tar.gz"
-  sha256 "2893e6400de96f7f6472489e2b25707d42f74f83531f12fc66ec7e6b0be750ba"
+  url "https://files.pythonhosted.org/packages/80/79/44937ae835d26319d35e97943190f0534d0bb9ec668f2d58fbcbc8b57d72/job_sluice-4.10.0.tar.gz"
+  sha256 "a6691c4959b50790fee5a26836f1e3bec2e827d11fc808eeeb27970ce9c38a44"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-4.9.0-38689593445-1"
-    sha256 cellar: :any, arm64_tahoe:   "e0586945f5b583ce3c65a6b789e273b4f760ce74dbd718631f13ff2e54495c19"
-    sha256 cellar: :any, arm64_sequoia: "1ecc5babbc814c6c6adf37056a29e4c10059c252a4e7d5dcb2d2208967273de5"
+    root_url "https://github.com/mrreasonable/homebrew-tap/releases/download/job-sluice-4.10.0-39158584192-1"
+    sha256 cellar: :any, arm64_tahoe:   "d0ee9e8aa673b4f9dfbdae084483630f617a527d262acaac0ec350768094c4d6"
+    sha256 cellar: :any, arm64_sequoia: "f3523c3d32929b1ba24d45fe88114e12bc511c864007f813b73c0872901a832f"
   end
 
   # No `version "..."` stanza here, deliberately. Homebrew's canonical component order is
@@ -82,8 +82,8 @@ class JobSluice < Formula
   end
 
   resource "fonttools" do
-    url "https://files.pythonhosted.org/packages/87/b6/126c659ab7e0e03e01a5f5d223abf7b2c0691ae92718085a212a3924a2a3/fonttools-4.66.1.tar.gz"
-    sha256 "64967c6ddb0d4c610dfd8cb1485981b2d27972ddfb7d4bbbd9e199d2a089c450"
+    url "https://files.pythonhosted.org/packages/94/36/102e180f8f5dbaee88b26595b01ca8aa80bf4e62128d9aa94265b3996c96/fonttools-4.67.0.tar.gz"
+    sha256 "3cb57e6600ca77c0b1729cf8adc23bc0652633a37f18cfa934d9c7bc3de25519"
   end
 
   resource "google-api-core" do
@@ -202,8 +202,8 @@ class JobSluice < Formula
   end
 
   resource "pydyf" do
-    url "https://files.pythonhosted.org/packages/36/ee/fb410c5c854b6a081a49077912a9765aeffd8e07cbb0663cfda310b01fb4/pydyf-0.12.1.tar.gz"
-    sha256 "fbd7e759541ac725c29c506612003de393249b94310ea78ae44cb1d04b220095"
+    url "https://files.pythonhosted.org/packages/67/1f/3a10f8d2d106bb68330c43a5cd0faf922d1816f65a1581f35015ac654a79/pydyf-0.13.0.tar.gz"
+    sha256 "3c1bd536c7161d9f472b82a8aaa27d3359a9058ec12de15302d92b3690dae7f5"
   end
 
   resource "pyjwt" do
